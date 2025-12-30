@@ -577,20 +577,6 @@
         });
       });
 
-      // Contact form submission
-      const contactForm = document.getElementById('contact-form');
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        alert(`Thank you, ${name}! Your message has been received. We'll get back to you at ${email} soon.`);
-
-        contactForm.reset();
-      });
-
       // Active nav link on scroll
       const sections = document.querySelectorAll('section');
       const navLinks = document.querySelectorAll('.nav-link');
@@ -613,32 +599,6 @@
           }
         });
       });
-    function sendToWhatsApp() {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if (!name || !email || !message) {
-      alert('Please fill in all fields.');
-      return;
-    }
-
-    const phoneNumber = '6282125810815'; // GANTI nomor WA kamu
-
-    const text =
-      `Hello Artopost!%0A%0A` +
-      `Name: ${name}%0A` +
-      `Email: ${email}%0A%0A` +
-      `Message:%0A${message}`;
-
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
-
-    window.open(whatsappURL, '_blank');   
-  }
     </script>
   </body>
 </html>
-
-
-
-
